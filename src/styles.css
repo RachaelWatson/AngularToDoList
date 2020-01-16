@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+    font-family: 'Open Sans', sans-serif;
+   }
+body{
+    background-image: linear-gradient(to right, rgb(214, 77, 134), rgb(255,97,93));
+}
+
+h1 {
+    margin: 0;
+}
+
+li > span {
+    display: flex;
+}
+
+app-todo {
+    flex: 1;
+}
+#taskArray{
+    align-items:  flex-start;
+   
+}
+
+li{
+    margin: 5px;
+    padding: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+.not-completed button {
+    color: rgb(224, 68, 133);
+    border: 1px solid rgb(224, 68, 133);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.exitButton {
+color:rgb(73, 71, 71); 
+border: none;
+justify-content: flex-end;
+
+}
+.container {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    
+ 
+
+.containerButton {
+    background-color: rgb(224, 68, 133);
+    width: 95%;
+    height: 32px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    align-items: center;
+    margin: auto;
+}
+
+.inputBox{ 
+    width: 95%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid rgb(236, 231, 231);
+    font-size: 1.25rem;
+    margin: 10px;
+}
+
+
+
