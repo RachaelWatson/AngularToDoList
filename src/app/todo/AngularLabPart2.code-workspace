@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "/Users/rachaelvruggink/Documents/GrandCircus/in-class practice/typescript"
+		},
+		{
+			"path": "/Users/rachaelvruggink/Documents/GrandCircus/assessment3Practice"
+		},
+		{
+			"path": "/Users/rachaelvruggink/Documents/GrandCircus/assessment-2-rachael-watson/src"
+		},
+		{
+			"path": "/Users/rachaelvruggink/Documents/GrandCircus/watsonAssessment3"
+		},
+		{
+			"path": "/Users/rachaelvruggink/Documents/GrandCircus/angular"
+		},
+		{
+			"path": "/Users/rachaelvruggink/Documents/GrandCircus/angularLab"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "angular"
+	}
+}

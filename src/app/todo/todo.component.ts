@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+
 
 interface ITodo{
   completed :boolean;
@@ -17,7 +18,12 @@ export class TodoComponent implements ITodo {
  @Input() completed: boolean;
 @Input() task: string;
 
+// @Output()
+// deleted : new EventEmitter <boolean> = new EventEmitter()
 
+// onDelete(){
+//   this.deleted.emit(true);
+//     } 
 
 }
 
@@ -27,7 +33,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+ 
+  //Use parent- child to effect. 
+  //Consider using ngContainer for the X button
 
 }
 

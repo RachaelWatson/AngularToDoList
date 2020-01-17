@@ -2,8 +2,9 @@
     
     <span [ngClass] = "{'completed' : completed, 'not-completed' : !completed}">
         <button *ngIf="!completed">Completed</button> {{task}} 
+        <!-- <button class="exitButton" >X</button> -->
     </span>
  
   
    
-
+    <!-- (click)="onDelete()" -->

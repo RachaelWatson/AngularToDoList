@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { stringify } from 'querystring';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 
 
@@ -32,12 +33,30 @@ tasks = [
     task: 'Tell Andrew he is just okay'
   }
 ];
-newTodo : string
- addTask(value : string){
-if (value !=="") {
-  this.tasks = [...this.tasks, {task : value, completed: false }]   
+@Input()
+newTodo : string;
+
+
+addTask(){
+  if (this.newTodo.length !== 0) {
+this.tasks.push({task : this.newTodo, completed: false});
+
 }
 }
+@Input()
+filterTodos : string;
+
+filterTasks() {
+ if (this.filterTodos){
+   return this.tasks.filter(task => task.task.toLowerCase().includes(this.filterTodos.toLowerCase()))
+  } return this.tasks;
 }
 
+}
+
+//Note to self: includes is a function. 
+// deletedItem ($event, index){
+//   this.newTodo.slice(index, 1);
+// }
 //take value and assign to be a task
+

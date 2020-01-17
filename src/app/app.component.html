@@ -4,23 +4,27 @@
     <p>A place to store your to-dos</p>
   
     <form>
-    <input type="text" placeholder="Filter your to-dos" class="inputBox" id="filterInput">
     <div id=taskArray>
+      <input type="text" name="filterTodos" [(ngModel)]="filterTodos" placeholder="Filter your to-dos" class="inputBox" id="filterInput">
+
    <ol>
-      <li *ngFor="let todo of tasks">
+      <li *ngFor="let todo of filterTasks()">
+    
         <span><app-todo [task] = "todo.task" [completed] = "todo.completed"></app-todo>
           <button class="exitButton">X</button>
         </span>
       </li> 
       </ol>
 </div>
-    <input type="text" placeholder="Add your to-do" class="inputBox" id="addTaskInput" [(ngModel)]="newTodo">
+    <input name="newTodo" type="text" placeholder="Add your to-do" class="inputBox" id="newTodo" [(ngModel)]="newTodo">
 
     </form>  
     
-    <button (click)="addTask(newTodo)" class="containerButton">Add</button>
+    <button (click)="addTask()" class="containerButton">Add</button>
 
   
 </div>
 </body>
+
+<!-- (deleted)= "deletedItem($event, 1)" -->
 
