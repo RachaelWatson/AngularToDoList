@@ -8,23 +8,17 @@
       <input type="text" name="filterTodos" [(ngModel)]="filterTodos" placeholder="Filter your to-dos" class="inputBox" id="filterInput">
 
    <ol>
-      <li *ngFor="let todo of filterTasks()">
-    
-        <span><app-todo [task] = "todo.task" [completed] = "todo.completed"></app-todo>
-          <button class="exitButton">X</button>
-        </span>
-      </li> 
+        <!-- <li *ngFor="let todo of tasks | filterTasks" -->
+        <app-todo *ngFor="let todo of filterTasks(); let i = index;"
+          (itemDeleted)="onItemDeleted(i)" [task] = "todo.task" [completed] = "todo.completed"></app-todo> 
       </ol>
 </div>
     <input name="newTodo" type="text" placeholder="Add your to-do" class="inputBox" id="newTodo" [(ngModel)]="newTodo">
 
     </form>  
     
-    <button (click)="addTask()" (click)= "clear()" class="containerButton">Add</button>
+    <button (click)="addTask()"  class="containerButton">Add</button>
 
   
 </div>
 </body>
-
-<!-- (deleted)= "deletedItem($event, 1)" -->
-

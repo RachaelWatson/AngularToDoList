@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
-interface ITodo{
-  completed :boolean;
+interface ITodo {
+  completed: boolean;
   task: string;
-  }
+}
 
 @Component({
   selector: 'app-todo',
@@ -12,30 +12,22 @@ interface ITodo{
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements ITodo {
-  constructor() { 
+  constructor() {
   }
-  
- @Input() completed: boolean;
-@Input() task: string;
 
-// @Output()
-// deleted : new EventEmitter <boolean> = new EventEmitter()
+  @Input() completed: boolean;
+  @Input() task: string;
 
-// onDelete(){
-//   this.deleted.emit(true);
-//     } 
+  @Output() itemDeleted = new EventEmitter();
+
+  removeTask() {
+    this.itemDeleted.emit();
+  }
+
+  completeTask() {
+    this.completed = true;
+  }
 
 }
 
-export class AppComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
- 
-  //Use parent- child to effect. 
-  //Consider using ngContainer for the X button
-
-}
 

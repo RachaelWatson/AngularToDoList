@@ -1,10 +1,13 @@
 
-    
-    <span [ngClass] = "{'completed' : completed, 'not-completed' : !completed}">
-        <button *ngIf="!completed">Completed</button> {{task}} 
-        <!-- <button class="exitButton" >X</button> -->
+   <span>
+   <li>
+   <span [ngClass] = "{'completed' : completed, 'not-completed' : !completed}">
+        <button type="button" (click)="completeTask()" *ngIf="!completed">Completed</button> 
+        <span class="itemContainer">{{task}}</span>
+        <button type="button" class="exitButton" name="delete" (click)="removeTask()">X</button>
+    </span>     
+    </li>
     </span>
  
   
    
-    <!-- (click)="onDelete()" -->
