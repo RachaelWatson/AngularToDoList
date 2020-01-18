@@ -43,6 +43,10 @@ this.tasks.push({task : this.newTodo, completed: false});
 
 }
 }
+
+clear(){
+  this.newTodo = '';
+}
 @Input()
 filterTodos : string;
 
