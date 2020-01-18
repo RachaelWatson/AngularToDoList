@@ -8,8 +8,7 @@
       <input type="text" name="filterTodos" [(ngModel)]="filterTodos" placeholder="Filter your to-dos" class="inputBox" id="filterInput">
 
    <ol>
-        <!-- <li *ngFor="let todo of tasks | filterTasks" -->
-        <app-todo *ngFor="let todo of filterTasks(); let i = index;"
+        <app-todo *ngFor="let todo of (tasks | filterTasks : filterTodos); let i = index;"
           (itemDeleted)="onItemDeleted(i)" [task] = "todo.task" [completed] = "todo.completed"></app-todo> 
       </ol>
 </div>

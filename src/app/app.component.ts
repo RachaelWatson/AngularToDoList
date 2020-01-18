@@ -59,11 +59,11 @@ export class AppComponent {
   @Input()
   filterTodos: string;
 
-  filterTasks() {
-    if (this.filterTodos) {
-      return this.tasks.filter(task => task.task.toLowerCase().includes(this.filterTodos.toLowerCase()))
-    } return this.tasks;
-  }
+  // filterTasks() {
+  //   if (this.filterTodos) {
+  //     return this.tasks.filter(task => task.task.toLowerCase().includes(this.filterTodos.toLowerCase()))
+  //   } return this.tasks;
+  // }
   
 
 }
